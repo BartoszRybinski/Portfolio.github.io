@@ -1,0 +1,318 @@
+html
+  scroll-behavior: smooth
+  header
+    width: 100%
+    height: 20vh
+    background-color: $white
+    display: flex
+
+    nav
+      margin: auto
+      width: 95%
+      height: 90%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      @media(max-width: $medium-devices)
+        width: 90%
+      img
+        width: 8%
+        @media(max-width: $medium-devices)
+          width: 12%
+        @media(max-width: $small-devices)
+          width: 16%
+      ul
+        display: flex
+        width: 50%
+        justify-content: space-around
+        @media(max-width: $large-devices)
+          width: 60%
+        @media(max-width: $medium-devices)
+          width: 80%
+        a
+          text-decoration: none
+          li
+            color: $black
+            list-style-type: none
+            position: relative
+            &:after
+              content: ''
+              position: absolute
+              width: 0%
+              height: 2px
+              background-color: $primary
+              display: block
+              transition: 0.2s ease-in-out
+            &:hover
+              &:after
+                width: 100%
+
+  .hero-section
+    width: 100%
+    height: 80vh
+    background-color: $black
+    display: flex
+    .hero-content-container
+      width: 50%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      @media(max-width: $medium-devices)
+        width: 100%
+      .hero-content
+        width: 55%
+        height: 45%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        text-align: center
+        @media(max-width: 1350px)
+          width: 60%
+        @media(max-width: $large-devices)
+          width: 65%
+        @media(max-width: $medium-devices)
+          width: 50%
+        @media(max-width: $small-devices)
+          height: 45%
+          width: 70%
+
+        h1
+          margin: 0
+          color: $white
+          line-height: 1.5em
+          font-weight: $font-thin
+          &:nth-child(1)
+            color: $primary
+          @media(max-width: $medium-devices)
+            &:nth-child(2)
+              font-size: 1.8em
+        span
+          color: $white
+          font-weight: $font-thin
+          @media(max-width: $medium-devices)
+            font-size: 1.1em
+
+        .btn-primary
+          background: transparent
+          border: 2px solid $primary
+          padding: 20px 40px
+          text-transform: uppercase
+          cursor: pointer
+          border: none
+          position: relative
+          margin-top: 12%
+          &:before
+            content: ''
+            top: 0px
+            left: 0px
+            position: absolute
+            width: 15px
+            height: 15px
+            border-top: 2px solid $primary
+            border-left: 2px solid $primary
+            transition: 0.3s all ease-in-out
+          &:after
+            content: ''
+            bottom: 0px
+            right: 0px
+            position: absolute
+            width: 15px
+            height: 15px
+            border-right: 2px solid $primary
+            border-bottom: 2px solid $primary
+            transition: 0.3s all ease-in-out
+          &:hover
+            &:before, &:after
+              width: 100%
+              height: 100%
+          span
+            color: $primary
+            font-weight: $font-thin
+            &:before
+              content: ''
+              bottom: 0px
+              left: 0px
+              position: absolute
+              width: 15px
+              height: 15px
+              border-bottom: 2px solid $primary
+              border-left: 2px solid $primary
+            &:after
+              content: ''
+              top: 0px
+              right: 0px
+              position: absolute
+              width: 15px
+              height: 15px
+              border-top: 2px solid $primary
+              border-right: 2px solid $primary
+    .hero-img-container
+      width: 50%
+      height: 100%
+      background-color: black
+      @media(max-width: $medium-devices)
+        visibility: hidden
+        width: 0%
+      img
+        width: 80%
+        height: 100%
+        @media(max-width: $medium-devices)
+          width: 100%
+  .about-section
+    width: 100%
+    height: 80vh
+    display: flex
+    @media(max-width: $medium-devices)
+      flex-direction: column
+      margin-bottom: 10%
+
+    .about-content-container
+      width: 50%
+      height: 100%
+      display: flex
+      @media(max-width: $medium-devices)
+        width: 100%
+      .about-content
+        width: 70%
+        height: 60%
+        margin: auto
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        text-align: center
+        h1
+          margin: 0
+          color: $primary
+          font-weight: $font-light
+        p
+          font-size: 1.1em
+          font-weight: $font-light
+    .about-img-container
+      width: 50%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      @media(max-width: $medium-devices)
+        width: 100%
+      img
+        width: 80%
+  .portfolio-section
+    width: 100%
+    height: max-content
+    display: flex
+    padding-top: 2%
+    padding-bottom: 2%
+    margin-bottom: 8%
+    @media(max-width: $medium-devices)
+      height: max-content
+    .portfolio-container
+      width: 90%
+      height: 90%
+      margin: auto
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      .portfolio-img
+        width: 100%
+        height: 30%
+        display: flex
+        justify-content: space-between
+        @media(max-width: $medium-devices)
+          order: 2
+        @media(max-width: $medium-devices)
+          justify-content: space-between
+          align-items: center
+          height: 50%
+          flex-direction: column
+        .portfolio-img-container
+          width: 35%
+          position: relative
+          cursor: pointer
+          @media(max-width: $large-devices)
+            width: 35%
+          @media(max-width: $medium-devices)
+            width: 70%
+            margin-top: 5%
+          img
+            width: 100%
+            height: 100%
+          .overlay-img
+            top: 0
+            left: 0
+            position: absolute
+            width: 100%
+            height: 100%
+            background-color: $secondary
+            display: flex
+            transition: 0.3s ease-in-out
+            .overlay-container
+              width: 70%
+              height: 70%
+              margin: auto
+              display: flex
+              flex-direction: column
+              justify-content: center
+              align-items: center
+              img
+                width: 60%
+                height: 80%
+              .music-logo, .app112-logo
+                width: 30%
+              .cosmos-logo
+                width: 50%
+              .icon-container
+                display: flex
+                width: 50%
+                justify-content: space-around
+                a
+                  width: 30%
+                  img
+                    width: 100%
+                  .icon-studentevent
+                    &:hover
+                      filter: invert(52%) sepia(80%) saturate(1372%) hue-rotate(138deg) brightness(100%) contrast(105%)
+                  .icon-app112
+                    &:hover
+                      filter: invert(50%) sepia(68%) saturate(5011%) hue-rotate(339deg) brightness(94%) contrast(91%)
+                  .icon-musicapp
+                    &:hover
+                      filter: invert(33%) sepia(98%) saturate(6786%) hue-rotate(330deg) brightness(93%) contrast(109%)
+                  .icon-cosmos
+                    &:hover
+                      filter: invert(57%) sepia(41%) saturate(269%) hue-rotate(354deg) brightness(98%) contrast(85%)
+
+      h1
+        margin: 0
+        align-self: center
+        color: $primary
+        font-weight: $font-thin
+        font-size: 2.5em
+        @media(max-width: $medium-devices)
+          order: 1
+
+  footer
+    width: 100%
+    height: max-content
+    background-color: $secondary
+    display: flex
+    color: $primary
+    text-align: center
+    .footer-container
+      width: 50%
+      margin: auto
+      display: flex
+      flex-direction: column
+      align-items: center
+      h2
+        color: $primary
+        font-weight: $font-thin
+        margin: 0
+      span
+        font-size: 0.9em
+      a
+        text-decoration: none
+        color: $primary
